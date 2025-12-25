@@ -4,6 +4,7 @@ import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Sprout, ArrowLeft, Eye, EyeOff } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { toast } from 'react-hot-toast';
 import { karnatakaDistricts, type DistrictName } from '../data/karnataka-locations';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
@@ -373,7 +374,6 @@ const Register = () => {
             </Link>
           </div>
         </form>
-        {error && <div className="text-red-500 text-center mt-4">{error}</div>}
         </motion.div>
       </div>
     </div>

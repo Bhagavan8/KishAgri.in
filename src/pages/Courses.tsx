@@ -11,7 +11,7 @@ const courses = [
     duration: '3 Months',
     rating: 4.9,
     students: 1200,
-    image: 'https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: 'https://images.unsplash.com/photo-1595838788831-3683e3b03d56?auto=format&fit=crop&q=80&w=1000',
     category: 'Entrance Exam'
   },
   {
@@ -21,7 +21,7 @@ const courses = [
     duration: '6 Months',
     rating: 4.8,
     students: 850,
-    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: 'https://images.unsplash.com/photo-1625246333195-58197bd47d26?auto=format&fit=crop&q=80&w=1000',
     category: 'National Level'
   },
   {
@@ -31,7 +31,7 @@ const courses = [
     duration: '4 Months',
     rating: 4.7,
     students: 500,
-    image: 'https://images.unsplash.com/photo-1625246333195-58197bd47d26?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&q=80&w=1000',
     category: 'Academic'
   },
   {
@@ -41,7 +41,7 @@ const courses = [
     duration: '5 Months',
     rating: 4.8,
     students: 300,
-    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80&w=1000',
     category: 'Professional'
   },
   {
@@ -51,7 +51,7 @@ const courses = [
     duration: '2 Months',
     rating: 4.9,
     students: 600,
-    image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1000',
     category: 'Skill Development'
   },
   {
@@ -61,7 +61,7 @@ const courses = [
     duration: '3 Months',
     rating: 4.6,
     students: 450,
-    image: 'https://images.unsplash.com/photo-1558909612-e29f42f81147?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1000',
     category: 'Specialization'
   }
 ];
