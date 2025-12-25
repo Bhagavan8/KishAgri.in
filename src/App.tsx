@@ -11,6 +11,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import CookiePolicy from './pages/CookiePolicy';
 import Syllabus from './pages/Syllabus';
+import Profile from './pages/Profile';
+import MyCourses from './pages/MyCourses';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="courses" element={<Courses />} />
+          <Route path="my-courses" element={<MyCourses />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="syllabus" element={<Syllabus />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
