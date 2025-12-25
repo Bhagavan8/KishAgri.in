@@ -14,7 +14,6 @@ const Login = () => {
     email: '',
     password: ''
   });
-  const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,19 +22,18 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
     setIsLoading(true);
 
     try {
       await signInWithEmailAndPassword(auth, formData.email, formData.password);
-      console.log('Login successful');
+      toast.success('Login successful');
       navigate('/');
     } catch (err: any) {
       console.error('Login error:', err);
       if (err.code === 'auth/invalid-credential' || err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password') {
-        setError('Invalid email or password.');
+        toast.error('Invalid email or password.');
       } else {
-        setError('Failed to login. Please try again.');
+        toast.error('Failed to login. Please try again.');
       }
     } finally {
       setIsLoading(false);

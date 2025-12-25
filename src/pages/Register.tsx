@@ -15,7 +15,6 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
   
   const [formData, setFormData] = useState({
     fullName: '',
@@ -41,11 +40,10 @@ const Register = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
     setIsLoading(true);
 
     if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
+      toast.error('Passwords do not match');
       setIsLoading(false);
       return;
     }
@@ -83,17 +81,17 @@ const Register = () => {
       });
 
       // 4. Redirect to login or dashboard
-      console.log('Registration successful');
+      toast.success('Registration successful! Please login.');
       navigate('/login');
       
     } catch (err: any) {
       console.error('Registration error:', err);
       if (err.code === 'auth/email-already-in-use') {
-        setError('Email is already registered. Please login.');
+        toast.error('Email is already registered. Please login.');
       } else if (err.code === 'auth/weak-password') {
-        setError('Password should be at least 6 characters.');
+        toast.error('Password should be at least 6 characters.');
       } else {
-        setError(err.message || 'Failed to register. Please try again.');
+        toast.error(err.message || 'Failed to register. Please try again.');
       }
     } finally {
       setIsLoading(false);
